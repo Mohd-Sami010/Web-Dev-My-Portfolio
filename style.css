@@ -74,7 +74,7 @@ nav>div {
 }
 
 .right-nav a:hover {
-    color: var(--text-color);
+    color: rgb(184, 184, 184);
 }
 
 /* Hero Section */
@@ -185,9 +185,15 @@ hr {
     justify-content: space-evenly;
     column-gap: 5px;
 }
+.project-images-container a{
+    transition: transform 0.2s;
+}
+.project-images-container a:hover{
+    transform: translateY(-5px);
+}
 
 .project-images-container::-webkit-scrollbar {
-    height: 8px;
+    height: 10px;
 }
 
 .project-images-container::-webkit-scrollbar-track {
@@ -305,6 +311,12 @@ hr {
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
+}
+.contact-links-container a{
+    transition: transform 0.2s;
+}
+.contact-links-container a:hover{
+    transform: translateY(-3px);
 }
 
 .links-section p {
