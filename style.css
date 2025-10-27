@@ -1,0 +1,427 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap');
+
+* {
+    font-family: "Baloo 2", sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --highlight-text: #0077ff;
+    --highlight-text2: #00b6ff;
+    --text-color: #fff;
+    --nav-bar-bg: #000023;
+    --dark-bg2: #485769;
+
+    --game-dev-project-category-title-underline: #00c8ff;
+    --game-dev-project-border: #009fe3;
+    --game-dev-project-bg: #0b0e13;
+    --game-dev-project-scroll-bg: #12171f;
+    --game-dev-project-button-color: #00b4ff;
+
+
+    --python-project-category-title-underline: #baff29;
+    --python-project-border: #9eff1a;
+    --python-project-bg: #101b00;
+    --python-project-scroll-bg: #182600;
+    --python-project-button-color: #c6ff3b;
+
+
+    --web-project-category-title-underline: #ff7a00;
+    --web-project-border: #ff6b00;
+    --web-project-bg: #1a0d00;
+    --web-project-scroll-bg: #261400;
+    --web-project-button-color: #ff8c1a;
+
+    --links-section-bg: #151515;
+
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background-color: black;
+    color: white;
+}
+
+nav {
+    background-color: var(--nav-bar-bg);
+    display: flex;
+    padding: 15px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav>div {
+    display: flex;
+    flex-direction: row;
+    column-gap: 25px;
+    margin: 0 50px;
+}
+
+.left-nav {
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.right-nav a {
+    text-decoration: none;
+    color: var(--text-color);
+    transition: color 0.15s;
+}
+
+.right-nav a:hover {
+    color: var(--text-color);
+}
+
+/* Hero Section */
+.hero-section {
+    /* background-color: red; */
+    display: flex;
+    flex-direction: row;
+    padding: 50px 150px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hero-text-container {
+    font-size: 1.5rem;
+}
+
+.hero-section h1 {
+    margin-top: 20px;
+    color: var(--text-color);
+}
+.hero-section img{
+    width: 23rem;
+    height: auto;
+}
+
+.my-name-text {
+    color: var(--highlight-text);
+}
+
+.passions-text {
+    padding: 20px 0;
+    font-size: 3rem;
+    font-weight: 600;
+    color: var(--highlight-text2);
+}
+
+hr {
+    margin: 15px 0;
+    width: 95vw;
+    height: 0;
+    border: 1px solid var(--dark-bg2);
+    align-self: center;
+    justify-self: center;
+}
+
+/* Projects Section */
+.projects-section {
+    padding: 10px 70px;
+}
+
+.projects-section h2 {
+    font-size: 2rem;
+}
+
+.project-category {
+    padding: 30px 30px;
+    margin: 20px 0px;
+    border-radius: 10px;
+}
+
+.project-category h3 {
+    text-align: center;
+    font-size: 1.5rem;
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+    text-decoration-color: var(--game-dev-project-category-title-underline);
+    text-underline-offset: 15px;
+}
+
+.project-container {
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+}
+
+.project {
+    /* background-color: var(--game-dev-project-bg); */
+    border: 1.5px solid;
+    padding: 10px 10px;
+    border-radius: 10px;
+}
+
+.project-title-container {
+    display: flex;
+    flex-direction: row;
+    padding: 10px 20px;
+}
+
+.project-title-container img {
+    width: 35px;
+    height: auto;
+    justify-self: center;
+    align-self: center;
+    border-radius: 10px;
+}
+
+.project-title-container h4 {
+    font-size: 1.4rem;
+    margin: 10px 15px;
+}
+
+.project-images-container {
+    overflow-x: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    column-gap: 5px;
+}
+
+.project-images-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.project-images-container::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+
+.project-images-container::-webkit-scrollbar-thumb {
+    background-color: #414141;
+    border-radius: 10px;
+}
+
+.project-images-container::-webkit-scrollbar-thumb:hover {
+    background-color: #848484;
+}
+
+.project-images-conatiner a img {
+    transition: transform 0.2s;
+    width: 345px;
+    height: auto;
+    justify-self: center;
+    align-self: center;
+}
+
+.project-images-conatiner a img:hover {
+    transform: translateY(-3px);
+}
+
+.text-container {
+    padding: 20px 20px;
+    font-size: larger;
+}
+
+.text-container a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: black;
+    border: 1.5px solid;
+    color: var(--text-color);
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.text-container a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 10px 0px rgb(187, 187, 187);
+}
+
+/* Game Dev Projects */
+.project-category:nth-of-type(1) h3 {
+    text-decoration-color: var(--game-dev-project-category-title-underline);
+}
+
+.project-category:nth-of-type(1) .project {
+    background-color: var(--game-dev-project-bg);
+    border: 1.5px solid var(--game-dev-project-border);
+}
+
+.project-category:nth-of-type(1) .project-images-container::-webkit-scrollbar-track {
+    background: var(--game-dev-project-scroll-bg);
+}
+
+.project-category:nth-of-type(1) .text-container a {
+    border-color: var(--game-dev-project-button-color);
+}
+
+/* Python Projects */
+.project-category:nth-of-type(2) h3 {
+    text-decoration-color: var(--python-project-category-title-underline);
+}
+
+.project-category:nth-of-type(2) .project {
+    background-color: var(--python-project-bg);
+    border: 1.5px solid var(--python-project-border);
+}
+
+.project-category:nth-of-type(2) .project-images-container::-webkit-scrollbar-track {
+    background: var(--python-project-scroll-bg);
+}
+
+.project-category:nth-of-type(2) .text-container a {
+    border-color: var(--python-project-button-color);
+}
+
+/* Web Dev Projects */
+.project-category:nth-of-type(3) h3 {
+    text-decoration-color: var(--web-project-category-title-underline);
+}
+
+.project-category:nth-of-type(3) .project {
+    background-color: var(--web-project-bg);
+    border: 1.5px solid var(--web-project-border);
+}
+
+.project-category:nth-of-type(3) .project-images-container::-webkit-scrollbar-track {
+    background: var(--web-project-scroll-bg);
+}
+
+.project-category:nth-of-type(3) .text-container a {
+    border-color: var(--web-project-button-color);
+}
+
+/* Link Section */
+.links-section {
+    background-color: var(--links-section-bg);
+    padding: 40px 400px;
+    border-radius: 30px 30px 0 0;
+    justify-self: center;
+    width: 100%;
+}
+
+.contact-links-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.links-section p {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: -20px;
+    color: #c9c9c9;
+}
+
+/*        RESPONSIVE FIXES       */
+
+@media (max-width: 1024px) {
+    .hero-section {
+        padding: 40px 80px;
+    }
+
+    .projects-section {
+        padding: 10px 40px;
+    }
+
+    .links-section {
+        padding: 40px 150px;
+    }
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        row-gap: 15px;
+        text-align: center;
+    }
+
+    nav>div {
+        margin: 0;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero-section {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 30px;
+    }
+
+    .hero-text-container {
+        font-size: 1.2rem;
+    }
+
+    .passions-text {
+        font-size: 1.2rem;
+    }
+
+    .hero-section img {
+        margin-top: 30px;
+        width: 120px;
+        height: auto;
+    }
+
+    .project-category {
+        padding: 20px;
+    }
+
+    .project-title-container {
+        flex-direction: row;
+        align-items: center;
+        text-align: center;
+    }
+
+    .project-title-container img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .project-title-container h4 {
+        margin: 10px 20px;
+        font-size: 1.3rem;
+    }
+
+    .project-images-container {
+        justify-content: flex-start;
+        overflow-x: scroll;
+    }
+
+    .project-images-container a img {
+        width: 280px;
+        max-width: 90vw;
+    }
+
+    .text-container {
+        font-size: 1rem;
+    }
+
+    .links-section {
+        padding: 40px 40px;
+    }
+
+    .contact-links-container {
+        flex-direction: row;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-section {
+        padding: 30px 20px;
+    }
+
+    .passions-text {
+        font-size: 1.7rem;
+    }
+
+    .projects-section {
+        padding: 10px 20px;
+    }
+
+    .project-images-container a img {
+        width: 240px;
+    }
+
+    .links-section {
+        padding: 30px 20px;
+    }
+}
