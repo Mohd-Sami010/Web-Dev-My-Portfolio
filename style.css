@@ -37,9 +37,11 @@
     --links-section-bg: #151515;
 
 }
+
 html {
     scroll-behavior: smooth;
 }
+
 body {
     background-color: black;
     color: white;
@@ -93,7 +95,8 @@ nav>div {
     margin-top: 20px;
     color: var(--text-color);
 }
-.hero-section img{
+
+.hero-section img {
     width: 23rem;
     height: auto;
 }
@@ -150,7 +153,6 @@ hr {
 }
 
 .project {
-    /* background-color: var(--game-dev-project-bg); */
     border: 1.5px solid;
     padding: 10px 10px;
     border-radius: 10px;
@@ -320,7 +322,7 @@ hr {
     }
 
     .projects-section {
-        padding: 10px 40px;
+        padding: 10px 0px;
     }
 
     .links-section {
@@ -342,17 +344,22 @@ hr {
     }
 
     .hero-section {
-        flex-direction: column;
-        text-align: center;
+        flex-direction: column-reverse;
         padding: 40px 30px;
+        text-align: center;
+    }
+
+    .hero-section img {
+        margin-top: 0;
+        margin-bottom: 25px;
     }
 
     .hero-text-container {
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
 
     .passions-text {
-        font-size: 1.2rem;
+        font-size: 1.4rem;
     }
 
     .hero-section img {
@@ -361,8 +368,12 @@ hr {
         height: auto;
     }
 
+    .projects-section {
+        padding: 0px 0px;
+    }
+
     .project-category {
-        padding: 20px;
+        padding: 0px;
     }
 
     .project-title-container {
@@ -410,7 +421,7 @@ hr {
     }
 
     .passions-text {
-        font-size: 1.7rem;
+        font-size: 2rem;
     }
 
     .projects-section {
