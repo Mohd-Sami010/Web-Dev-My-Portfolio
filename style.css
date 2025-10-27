@@ -97,7 +97,8 @@ nav>div {
 }
 
 .hero-section img {
-    width: 23rem;
+    margin-bottom: -20px;
+    width: 20rem;
     height: auto;
 }
 
