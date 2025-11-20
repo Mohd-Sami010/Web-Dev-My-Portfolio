@@ -240,8 +240,7 @@ hr {
 }
 
 .text-container a:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 0 10px 0px rgb(187, 187, 187);
+    box-shadow: 0 0 15px 0px rgb(187, 187, 187);
 }
 
 /* Game Dev Projects */
