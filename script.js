@@ -9,6 +9,7 @@ const achievementContainer = document.getElementById("achievement-container");
 
 //Restore Unlock
 if (localStorage.getItem("skillsUnlocked") === "true"){
+    skillsContainer.classList.remove("locked");
     skillsContainer.classList.add("unlocked");
 }
 if (localStorage.getItem("projectsUnlocked") === "true"){
@@ -27,8 +28,9 @@ skillsLock.addEventListener("click", () => {
 })
 
 function UnlockSkills(){
+    skillsContainer.classList.remove("locked");
     skillsContainer.classList.add("unlocked");
-    localStorage.setItem("skillsUnlocked", "true");
+    // localStorage.setItem("skillsUnlocked", "true");
     ShowAchievement("Clicker Game", "Click 5 times on Skills section.")
 }
 

@@ -22,7 +22,7 @@
 }
 
 body {
-    background-color: black;
+    background-color: #141414;
 }
 
 h1 {
@@ -57,6 +57,9 @@ h1 {
 }
 
 nav {
+    position: fixed;
+    width: 100%;
+    z-index: 100;
     background-color: rgb(30, 30, 30);
     padding: 20px 5vw;
     display: flex;
@@ -90,7 +93,7 @@ nav h2{
     flex-direction: row;
     column-gap: 3vw;
     justify-content: space-between;
-    padding: 40px 10vw 50px 9vw;
+    padding: 100px 10vw 50px 9vw;
     align-items: center;
     color: rgb(218, 218, 218);
 }
@@ -113,18 +116,31 @@ hr {
 /* Skills Section */
 .skills-section {
     color: white;
-    /* text-align: center; */
     padding: 60px 10vw;
 }
 
 .skills-container {
-    position: relative;
-    padding: 80px 20px;
-    background-color: rgb(27, 27, 27);
+    background-color: rgb(16, 16, 16);
     border-radius: 20px;
-    margin-top: 20px;
-}
 
+    position: relative;
+    padding: 20px 20px;
+    margin-top: 20px;
+
+    /* Transition magic */
+    overflow: hidden;
+    transition: max-height 0.6s ease, padding 0.4s ease;
+}
+.skills-container.locked {
+    max-height: 260px;
+    padding: 20px 20px;
+    cursor: pointer;
+}
+.skills-container.unlocked {
+    max-height: 2000px; /* large enough to fit content */
+    padding: 20px 20px;
+    cursor: default;
+}
 .skills-container p {
     font-size: 1.5em;
 }
@@ -136,40 +152,52 @@ hr {
     background-color: rgba(0, 0, 0, 0.85);
     display: flex;
     justify-content: center;
+    border-radius: 10px;
     align-items: center;
     font-size: 1.5em;
     cursor: pointer;
 }
+.lock-overlay p{
+    position:static;
+}
 
 /* Disabled Content */
 .skills-content {
-    opacity: 0.1;
+    opacity: 0.08;
     pointer-events: none;
+    transition: opacity 0.3s ease;
 }
 
 ul {
     list-style-type: none;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-evenly;
     column-gap: 20px;
 }
-
 ul li {
     display: flex;
     flex-direction: column;
-    padding: 20px 20px;
+    padding: 20px 25px;
     background-color: rgb(0, 0, 0);
+    box-shadow: 5px 5px 10px 2px rgb(26, 26, 26);
     margin: 20px 0;
-    font-size: 1.5em;
     border-radius: 10px;
     justify-content: center;
-    align-items: center;
-    row-gap: 20px;
+    row-gap: 30px;
+    width: 300px;
+
+    /* Text  */
+    font-size: 0.9em;
+    text-align: left;
+    line-height: 26px;
 }
 ul li img{
     /* width: auto; */
     height: auto;
+    align-self: center;
+    max-width: 300px;
 }
 
 /* UNLOCKED STATE */
@@ -186,21 +214,33 @@ ul li img{
 /* Projects  */
 .project-section {
     color: white;
-    text-align: center;
-    padding: 5vh 13vw;
+    padding: 60px 10vw;
 }
 
 .project-container {
     position: relative;
     padding: 80px 20px;
-    background-color: rgb(27, 27, 27);
+    background-color: rgb(16, 16, 16);
     border-radius: 20px;
     margin-top: 20px;
-}
 
+    overflow: hidden;
+    transition: max-height 0.6s ease, padding 0.4s ease;
+}
+.project-container.locked {
+    max-height: 260px;
+    padding: 40px 10px;
+    cursor: pointer;
+}
+.project-container.unlocked {
+    max-height: 2000px;
+    padding: 80px 20px;
+    cursor: default;
+}
 .projects-content {
-    opacity: 0.1;
+    opacity: 0.05;
     pointer-events: none;
+    transition: opcaity 0.3s ease;
 }
 
 .project-container.unlocked .lock-overlay {
