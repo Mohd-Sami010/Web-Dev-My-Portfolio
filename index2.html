@@ -1,32 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mohd Sami</title>
     <link rel="stylesheet" href="style2.css">
 </head>
+
 <body>
     <nav>
-        <h2>Sami's Portfolio</h2>
+        <h2><span class="blue-text">public class </span><span class="teal-text"><b>SamiPortfolio</b></span>{</h2>
         <div class="nav-buttons">
-            <a href="http://">Skills</a>
-            <a href="http://">Projects</a>
-            <a href="http://">Contact me</a>
+            <a href="#skills-section"><span class="yellow-text">Skills</span>()</a>
+            <a href="#project-section"><span class="yellow-text">Projects</span>()</a>
+            <a href="#contact-section"><span class="yellow-text">ContactMe</span>()</a>
         </div>
     </nav>
     <main>
         <div class="hero-section">
-            <p class="introduction">Hi, I'm <b>Sami</b> a passionate Game programmer. Skilled in <b>C#</b>, <b>Python</b>, <b>Java</b> and most important <b>Problem Solving</b>.</p>
+            <!-- <p class="introduction">Hi, I'm <b>Sami</b> a passionate <b>Game programmer</b>. Skilled in <b>C#</b>,
+                <b>Python</b> and most important <b>Problem Solving</b>.
+            </p> -->
+            <div class="introduction">
+                <h1><span class="blue-text">public void</span> <span class="yellow-text"><b>Introduction</b></span>(){</h1>
+                <p class="green-text"><span class="hidden-text">----</span>// Hi,</p>
+                <p><span class="hidden-text">----</span><span class="blue-text">string</span> name = <span class="orange-text">"Mohd Sami"</span>;</p><br>
+
+                <p><span class="hidden-text">----</span><span class="blue-text">string</span>[] myPassions = {</p>
+                    <p><span class="hidden-text">----</span><span class="hidden-text">----</span>
+                        <span class="orange-text">"Game Development"</span>,</p>
+                <p><span class="hidden-text">----</span><span class="hidden-text">----</span>
+                    <span class="orange-text">"Programming"</span></p>
+                <p><span class="hidden-text">----</span>};</p><br>
+
+                <p><span class="hidden-text">----</span><span class="blue-text">string</span>[] mySkills = {</p>
+                    <p><span class="hidden-text">----</span><span class="hidden-text">----</span> <span class="orange-text">"C#"</span>, <span class="orange-text">"Unity Engine"</span>,
+                        <span class="orange-text">"Python"</span>,</p>
+                        <p><span class="hidden-text">----</span><span class="hidden-text">----</span><span class="orange-text"> "Problem Solving"</span></p>
+                <p><span class="hidden-text">----</span>};</p>
+                <p> }</p>
+            </div>
             <img src="Images/programmer-image.png" alt="">
         </div>
-        <div class="skills-section">
+        <hr>
+        <div id="skills-section" class="skills-section">
+            <h1><span class="blue-text">public void</span> <span class="yellow-text"><b>Skills</b></span>(){</h1>
 
+            <div class="skills-container locked" id="skills-container">
+
+                <!-- Lock Screen -->
+                <div class="lock-overlay no-select" id="skills-lock">
+                    <p>Click here 5 times to unlock <b>Skills Section</b></p>
+                </div>
+
+                <!-- Real content -->
+                 <p><span class="teal-text">Image</span>[] skills = {</p>
+                <div class="skills-content" id="skills-content">
+                    <ul>
+                        <li><img src="Images/c-sharp.png" height="100" alt=""></li>
+                        <li><img src="Images/Unity-logo.png" alt=""> Unity</li>
+                        <li><img src="Images/python-logo.png" alt="">Python</li>
+                        <li><img src="Images/problem-solving.png" alt="">Problem Solving</li>
+                    </ul>
+                </div>
+                <p>}</p>
+            </div>
         </div>
-        <div class="project-section">
 
+        <div id="project-section" class="project-section">
+            <h1>Projects</h1>
+            <div class="project-container locked" id="project-container">
+
+                <!-- Lock Screen -->
+                <div class="lock-overlay no-select" id="projects-lock">
+                    <p>Complete <b>Doom Scroller Achievement</b> to unlock this section</p>
+                </div>
+                <div class="projects-content" id="projects-content">
+                    <ul>
+                        <li>2D Platformer (Unity)</li>
+                        <li>Puzzle Game</li>
+                        <li>LeetCode Progress Tracker</li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </main>
     <footer></footer>
+    <div id="achievement-container"></div>
+    <script src="script.js"></script>
 </body>
+
 </html>
