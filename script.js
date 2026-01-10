@@ -43,7 +43,7 @@ window.addEventListener("scroll", () => {
 })
 function UnlockProjects(){
     projectsContainer.classList.add("unlocked");
-    // localStorage.setItem("projectsUnlocked", "true");
+    localStorage.setItem("projectsUnlocked", "true");
     ShowAchievement("Doom Scroller", "Scroll to the buttom.")
 }
 
@@ -59,7 +59,8 @@ function ShowAchievement(title, description = "Achievement Unlocked") {
             <strong>${title}</strong>
         </div>
     `;
-
+    const sound = new Audio("Images/Audios/steam-achievement.mp3");
+    sound.play()
     achievementContainer.appendChild(achievement);
 
     // Auto-remove after animation completes

@@ -49,7 +49,8 @@
         </div>
         <hr>
         <div id="skills-section" class="skills-section">
-            <h1><span class="blue-text">public void</span> <span class="yellow-text"><b>Skills</b></span>(){</h1>
+            <h1><span class="blue-text">public</span> <span class="teal-text">Skill</span>[] <span
+                    class="yellow-text"><b>Skills</b></span>(){</h1>
 
             <div class="skills-container locked" id="skills-container">
 
@@ -105,7 +106,8 @@
         </div>
 
         <div id="project-section" class="project-section">
-            <h1><span class="blue-text">public void</span> <span class="yellow-text"><b>Projects</b></span>(){</h1>
+            <h1><span class="blue-text">public</span> <span class="teal-text">Project</span>[] <span
+                    class="yellow-text"><b>Projects</b></span>(){</h1>
             <div class="project-container locked" id="project-container">
 
                 <!-- Lock Screen -->
@@ -113,18 +115,84 @@
                     <p>Complete <b>Doom Scroller Achievement</b> to unlock this section</p>
                 </div>
                 <div class="projects-content" id="projects-content">
-                    <ul>
-                        <li>2D Platformer (Unity)</li>
-                        <li>Puzzle Game</li>
-                        <li>LeetCode Progress Tracker</li>
-                    </ul>
+                    <div class="game-projects">
+                        <p><span class="teal-text">Project</span>[] gameDevProjects = {</p>
+                        <ul>
+                            <!-- Re Program -->
+                            <li class="project">
+                                <div>
+                                    <img src="https://img.itch.zone/aW1nLzI0MjkzNjY2LnBuZw==/315x250%23c/Z0dHZ6.png"
+                                        alt="">
+                                    <a href="https://samicode-games.itch.io/re-program" target="_blank">
+                                        <span class="yellow-text">ViewProject</span>()
+                                    </a>
+                                </div>
+                                <div class="project-info-container">
+                                    <h3>projectName = <span class="orange-text">"RE: Program"</span>;</h3>
+
+                                    <p>projectInfo = <span class="orange-text">"<br>
+                                            This is my Best Project so far,<br>
+                                            because I made an Interpreter in this game that you can use to program the
+                                            action of robot by a node based scripting language, And when you hit run
+                                            Interpreter will execute your code line by line and robot will follow those
+                                            commands like Move, Jump, Pick, Drop etc. <br>
+                                            You goal is make Robot reach finish line.
+                                            This is currently under development, The demo will launched soon for android
+                                            devices.
+                                            "</span>;
+                                    </p>
+                                    <p>skillsUsed = {
+                                        <span class="orange-text">"Unity Engine"</span>,
+                                        <span class="orange-text">"C#"</span>,
+                                        <span class="orange-text">"Problem Solving"</span>,
+                                        <span class="orange-text">"Clean Code"</span>};
+                                    </p>
+
+                                </div>
+                            </li>
+                            <!-- Project Antidote -->
+                            <li class="project">
+                                <div>
+                                    <img src="https://img.itch.zone/aW1nLzIyMDMyODQ2LnBuZw==/315x250%23c/9ndgS8.png"
+                                        alt="">
+                                    <a href="https://samicode-games.itch.io/project-antidote" target="_blank">
+                                        <span class="yellow-text">ViewProject</span>()
+                                    </a>
+                                </div>
+                                <div class="project-info-container">
+                                    <h3>projectName = <span class="orange-text">"Project Antidote"</span>;</h3>
+
+                                    <p>projectInfo = <span class="orange-text">"<br>
+                                            This is my Best Project so far,<br>
+                                            because I made an Interpreter in this game that you can use to program the
+                                            action of robot by a node based scripting language, And when you hit run
+                                            Interpreter will execute your code line by line and robot will follow those
+                                            commands like Move, Jump, Pick, Drop etc. <br>
+                                            You goal is make Robot reach finish line.
+                                            This is currently under development, The demo will launched soon for android
+                                            devices.
+                                            "</span>;
+                                    </p>
+                                    <p>skillsUsed = {
+                                        <span class="orange-text">"Unity Engine"</span>,
+                                        <span class="orange-text">"C#"</span>,
+                                        <span class="orange-text">"Problem Solving"</span>,
+                                        <span class="orange-text">"Clean Code"</span>};
+                                    </p>
+
+                                </div>
+                            </li>
+                        </ul>
+                        <p>}</p>
+                    </div>
                 </div>
             </div>
             <h1>}</h1>
         </div>
     </main>
     <footer></footer>
-    <div id="achievement-container"></div>
+    <div id="achievement-container">
+    </div>
     <script src="script.js"></script>
 </body>
 

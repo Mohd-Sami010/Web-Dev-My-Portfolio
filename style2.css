@@ -227,6 +227,9 @@ ul li img{
     overflow: hidden;
     transition: max-height 0.6s ease, padding 0.4s ease;
 }
+.project-container p{
+    font-size: 1.5em;
+}
 .project-container.locked {
     max-height: 260px;
     padding: 40px 10px;
@@ -234,13 +237,63 @@ ul li img{
 }
 .project-container.unlocked {
     max-height: 2000px;
-    padding: 80px 20px;
+    padding: 20px 20px;
     cursor: default;
 }
 .projects-content {
     opacity: 0.05;
     pointer-events: none;
     transition: opcaity 0.3s ease;
+}
+.projects-content ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.project{
+    display: flex;
+    flex-direction: row;
+    column-gap: 20px;
+    justify-content:left;
+    width: 95%;
+}
+.project img{
+    border-radius: 10px;
+    margin-top: 15px;
+}
+.project h3{
+    margin-top: 10px;
+    font-size: 2.2em;
+}
+.project-info-container{
+    display: flex;
+    flex-direction: column;
+}
+.project-info-container p{
+    font-size: 1.4em;
+}
+.project-info-container p{
+    margin-top: 10px;
+}
+.project a{
+    color: white;
+    margin-top: 20px;
+    display: block;
+    background-color: rgb(29, 29, 29);
+    width: 300px;
+    padding: 15px 20px;
+    text-align: center;
+    border-radius: 10px;
+    border: 2px solid rgb(10, 10, 10);
+    font-size: 2em;
+    text-decoration: none;
+    justify-self: center;
+
+    transition: all 0.3s;
+}
+.project a:hover{
+    background-color: rgb(22, 22, 22);
 }
 
 .project-container.unlocked .lock-overlay {
@@ -250,14 +303,6 @@ ul li img{
 .project-container.unlocked .projects-content {
     opacity: 1;
     pointer-events: auto;
-}
-
-.skills-container p {
-    font-size: 1.5em;
-}
-
-.project-container p {
-    font-size: 1.5em;
 }
 
 /* ============================= */
@@ -310,14 +355,14 @@ ul li img{
 }
 
 .achievement-text small {
-    color: #9f9f9f;
-    font-size: 0.75em;
+    color: #c6c6c6;
+    font-size: 0.95em;
     margin-bottom: 5px;
     letter-spacing: 0.5px;
 }
 
 .achievement-text strong {
-    font-size: 1em;
+    font-size: 1.3em;
 }
 
 /* Animations */
